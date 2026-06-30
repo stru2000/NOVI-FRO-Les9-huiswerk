@@ -7,6 +7,7 @@ import generateProductName from './helpers/product-name.js';
 import generateProductPrice from './helpers/product-price.js';
 import generateProductSize from './helpers/generate-size.js';
 import BestSoldTv from "./components/BestSoldTv.jsx";
+import generateProductFeatures from './helpers/product-features.js';
 
 function App() {
 
@@ -16,6 +17,11 @@ function App() {
   const productName = generateProductName();
   const productPrice = generateProductPrice();
   const productSize = generateProductSize();
+  const features = generateProductFeatures();
+
+  function handleClick(event) {
+      console.log(event.target.textContent);
+  }
 
   return (
     <>
@@ -30,7 +36,13 @@ function App() {
 
       <h2>Best verkochte TV</h2>
 
-      <BestSoldTv combinedName={productName} combinedPrice={productPrice} combinedSize={productSize} />
+      <BestSoldTv combinedName={productName} combinedPrice={productPrice} combinedSize={productSize} features={features}/>
+
+       <div className="buttons-wrapper">
+         <button onClick={handleClick}>Meest verkocht eerst</button>
+         <button onClick={handleClick}>Goedkoopste eerst</button>
+         <button onClick={handleClick}>Meest geschikt voor sport eerst</button>
+       </div>
 
 
     </>

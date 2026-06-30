@@ -7,3 +7,14 @@
     margin: 0;
     padding: 0;
 }
+
+.buttons-wrapper {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.buttons-wrapper button {
+    padding: 10px 16px;
+    cursor: pointer;
+}

@@ -1,0 +1,58 @@
+.best-sold-tv {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    border: 1px dashed #333;
+    padding: 32px 26px;
+    max-width: 900px;
+}
+
+.best-sold-tv__image-wrapper {
+    flex-shrink: 0;
+}
+
+.best-sold-tv__image {
+    width: 230px;
+    display: block;
+}
+
+.best-sold-tv__content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.best-sold-tv__title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.best-sold-tv__price {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.best-sold-tv__sizes {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.best-sold-tv__features {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.best-sold-tv__feature {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    font-size: 14px;
+}
+
+.best-sold-tv__feature img {
+    width: 14px;
+    height: 14px;
+}
