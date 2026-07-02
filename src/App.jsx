@@ -8,24 +8,30 @@ import generateProductPrice from './helpers/product-price.js';
 import generateProductSize from './helpers/generate-size.js';
 import BestSoldTv from "./components/BestSoldTv.jsx";
 import generateProductFeatures from './helpers/product-features.js';
+import showOutcomeInConsole from './constants/oefenbestand.js';
 
 function App() {
 
-  const sold = calculateTotalTvsSold();
-  const purchased = calculateTotalTvsPurchased();
-  const unsold = calculateTotalTvsUnsold();
-  const productName = generateProductName();
-  const productPrice = generateProductPrice();
-  const productSize = generateProductSize();
-  const features = generateProductFeatures();
+const sold = calculateTotalTvsSold();
+const purchased = calculateTotalTvsPurchased();
+const unsold = calculateTotalTvsUnsold();
+const productName = generateProductName();
+const productPrice = generateProductPrice();
+const productSize = generateProductSize();
+const features = generateProductFeatures();
+showOutcomeInConsole();
 
-  function handleClick(event) {
-      console.log(event.target.textContent);
-  }
+function handleClick(event) {
+  console.log(event.target.textContent);
+}
+
+
+
 
   return (
     <>
       <h1>Tech it easy dashboard</h1>
+
       <h2>Verkoopoverzicht</h2>
 
       <div className="tiles-wrapper">
@@ -38,11 +44,13 @@ function App() {
 
       <BestSoldTv combinedName={productName} combinedPrice={productPrice} combinedSize={productSize} features={features}/>
 
-       <div className="buttons-wrapper">
-         <button onClick={handleClick}>Meest verkocht eerst</button>
-         <button onClick={handleClick}>Goedkoopste eerst</button>
-         <button onClick={handleClick}>Meest geschikt voor sport eerst</button>
-       </div>
+      <h2>Alle tvs</h2>
+
+      <div className="buttons-wrapper">
+        <button onClick={handleClick}>Meest verkocht eerst</button>
+        <button onClick={handleClick}>Goedkoopste eerst</button>
+        <button onClick={handleClick}>Meest geschikt voor sport eerst</button>
+      </div>
 
 
     </>
