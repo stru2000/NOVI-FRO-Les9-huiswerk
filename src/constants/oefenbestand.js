@@ -19,7 +19,8 @@ function showOutcomeInConsole() {
     console.log(sportModelArray);
 
 
-    const wideModel = inventory.filter ((tv) => tv.availableSizes >= 65 )
+    const wideModel = inventory.filter ((tv) =>
+        tv.availableSizes.find((size)=> size  >= 65 ))
     console.log(wideModel);
 
 }
