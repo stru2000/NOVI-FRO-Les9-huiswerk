@@ -1,32 +1,24 @@
 import './App.css';
 import Tile from './components/Tiles.jsx';
-import calculateTotalTvsSold from './helpers/sold-tvs';
-import calculateTotalTvsPurchased from "./helpers/purchased-tvs.js";
-import calculateTotalTvsUnsold from "./helpers/unsold-tvs.js";
-import generateProductName from './helpers/product-name.js';
-import generateProductPrice from './helpers/product-price.js';
-import generateProductSize from './helpers/generate-size.js';
-import BestSoldTv from "./components/BestSoldTv.jsx";
-import generateProductFeatures from './helpers/product-features.js';
+import calculateTotalTvsSold from './helpers/inventory/calculate-sold-tvs.js';
+import calculateTotalTvsPurchased from "./helpers/inventory/calculate-purchased-tvs.js";
+import calculateTotalTvsUnsold from "./helpers/inventory/calculate-unsold-tvs.js";
+import TvCard from "./components/tvCard.jsx";
 import showOutcomeInConsole from './constants/oefenbestand.js';
+import { inventory, bestSellingTv } from './constants/inventory.js';
+import findMostSold from "./helpers/inventory/find-most-sold.js";
 
 function App() {
 
 const sold = calculateTotalTvsSold();
 const purchased = calculateTotalTvsPurchased();
 const unsold = calculateTotalTvsUnsold();
-const productName = generateProductName();
-const productPrice = generateProductPrice();
-const productSize = generateProductSize();
-const features = generateProductFeatures();
+
 showOutcomeInConsole();
 
 function handleClick(event) {
   console.log(event.target.textContent);
 }
-
-
-
 
   return (
     <>
@@ -42,7 +34,7 @@ function handleClick(event) {
 
       <h2>Best verkochte TV</h2>
 
-      <BestSoldTv combinedName={productName} combinedPrice={productPrice} combinedSize={productSize} features={features}/>
+      <TvCard product={findMostSold(inventory)} />
 
       <h2>Alle tvs</h2>
 
@@ -52,7 +44,11 @@ function handleClick(event) {
         <button onClick={handleClick}>Meest geschikt voor sport eerst</button>
       </div>
 
-
+    <ul>
+        {inventory.map((tv) => {
+            return <li key={tv.type}>{tv.brand}</li>;
+        })}
+    </ul>
     </>
   )
 }

@@ -23,6 +23,13 @@ function showOutcomeInConsole() {
         tv.availableSizes.find((size)=> size  >= 65 ))
     console.log(wideModel);
 
+    const featureAmbiLight = inventory.filter ((tv) =>
+        tv.options.find((feature) => feature.name === 'ambiLight' && feature.applicable ===true ));
+    console.log(featureAmbiLight)
+
+    const mostSold = inventory.sort ((a,b) => b.sold - a.sold);
+    console.log(mostSold[0]);
+
 }
 
 export default showOutcomeInConsole;

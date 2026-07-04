@@ -1,5 +1,5 @@
 // BEST VERKOPENDE TV
-export const bestSellingTv = {
+export const bestSellingTv = [{
     type: 'UHD 55AU7040',
     name: 'Crystal',
     brand: 'Samsung',
@@ -34,7 +34,7 @@ export const bestSellingTv = {
     ],
     originalStock: 52,
     sold: 17,
-}
+}]
 
 // STATISCHE VOORRAAD TV'S
 export let inventory = [
@@ -326,6 +326,43 @@ export let inventory = [
         originalStock: 10,
         sold: 8,
     },
+    {
+        type: 'UHD 55AU7040',
+        name: 'Crystal',
+        brand: 'Samsung',
+        price: 549,
+        availableSizes: [43, 50, 55, 65],
+        refreshRate: 50,
+        screenType: 'LED-LCD',
+        screenQuality: 'Ultra HD/4K',
+        smartTv: true,
+        sourceImg: 'https://image.coolblue.nl/max/500x500/products/1786196',
+        options: [
+            {
+                name: "wifi",
+                applicable: true
+            },
+            {
+                name: "speech",
+                applicable: false
+            },
+            {
+                name: "hdr",
+                applicable: true
+            },
+            {
+                name: "bluetooth",
+                applicable: true
+            },
+            {
+                name: "ambiLight",
+                applicable: false
+            }
+        ],
+        originalStock: 52,
+        sold: 17,
+    }
+
 ];
 
 

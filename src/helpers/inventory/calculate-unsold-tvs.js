@@ -1,5 +1,5 @@
-import calculateTotalTvsSold from "../helpers/sold-tvs.js";
-import calculateTotalTvsPurchased from "../helpers/purchased-tvs.js";
+import calculateTotalTvsSold from "./calculate-sold-tvs.js";
+import calculateTotalTvsPurchased from "./calculate-purchased-tvs.js";
 
 function calculateTotalTvsUnsold() {
     const soldTvs = calculateTotalTvsSold();

@@ -1,7 +1,7 @@
-import { bestSellingTv } from "../constants/inventory.js";
+// import { bestSellingTv } from "../../constants/inventory.js";
 
-function generateProductFeatures() {
-    return bestSellingTv.options.map((feature) => {
+function generateProductFeatures(product) {
+    return product.options.map((feature) => {
         if (feature.applicable) {
             return {
                 name: feature.name,
