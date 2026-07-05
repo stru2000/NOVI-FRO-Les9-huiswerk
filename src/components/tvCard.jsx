@@ -10,15 +10,13 @@ function TvCard({ product }) {
     const combinedPrice = generateProductPrice(product);
     const combinedSize = generateProductSize(product);
     const features = generateProductFeatures(product);
+    const isSoldOut = product.originalStock - product.sold === 0;
 
     return (
         <article className="tv-card">
+            {isSoldOut && <img className="tv-card__sold-out" src="/src/assets/out-of-stock.png" alt="Uitverkocht"/>}
             <div className="tv-card__image-wrapper">
-                <img
-                    className="tv-card__image"
-                    src={product.sourceImg}
-                    alt="Afbeelding van het product"
-                />
+                <img className="tv-card__image" src={product.sourceImg} alt="Afbeelding van het product"/>
             </div>
 
             <div className="tv-card__content">

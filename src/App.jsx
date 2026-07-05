@@ -4,7 +4,7 @@ import calculateTotalTvsSold from './helpers/inventory/calculate-sold-tvs.js';
 import calculateTotalTvsPurchased from "./helpers/inventory/calculate-purchased-tvs.js";
 import calculateTotalTvsUnsold from "./helpers/inventory/calculate-unsold-tvs.js";
 import TvCard from "./components/tvCard.jsx";
-// import showOutcomeInConsole from './constants/oefenbestand.js';
+import showOutcomeInConsole from './constants/oefenbestand.js';
 import {inventory, bestSellingTv} from './constants/inventory.js';
 import findMostSold from "./helpers/inventory/find-most-sold.js";
 import {
@@ -20,7 +20,7 @@ function App() {
     const purchased = calculateTotalTvsPurchased();
     const unsold = calculateTotalTvsUnsold();
 
-    // showOutcomeInConsole();
+    showOutcomeInConsole();
 
     // function handleClick(event) {
     //     console.log(event.target.textContent);
