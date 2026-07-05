@@ -1,0 +1,36 @@
+
+.tiles-wrapper {
+    width: 100%;
+    max-width: 900px;
+    max-height: 600px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.tile {
+    width: 250px;
+    height: 170px;
+    padding: 12px;
+    border-width: 4px;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.sold {
+    border-color: #000;: darkgreen;
+    background-color: lightseagreen;
+}
+
+.purchased {
+    border-color: darkblue;
+    background-color: lightskyblue;
+}
+
+.unsold {
+    border-color: tomato;
+    background-color: palevioletred;
+}
