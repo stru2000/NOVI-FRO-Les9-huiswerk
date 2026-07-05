@@ -7,12 +7,8 @@ import TvCard from "./components/tvCard.jsx";
 import showOutcomeInConsole from './constants/oefenbestand.js';
 import {inventory, bestSellingTv} from './constants/inventory.js';
 import findMostSold from "./helpers/inventory/find-most-sold.js";
-import {
-    sortByCheapest,
-    sortByLargestScreens,
-    sortByMostSold,
-    sortBySuitableForSports
-} from "./helpers/inventory/sort-inventory.js";
+import {sortByCheapest, sortByLargestScreens, sortByMostSold,sortBySuitableForSports}
+from "./helpers/inventory/sort-inventory.js";
 
 function App() {
 
